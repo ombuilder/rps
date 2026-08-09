@@ -295,6 +295,11 @@ class GhostKey:
                             Key.space: " ",
                             Key.esc: "⎋",
                             Key.delete: "⌦",
+                            Key.up: "↑",
+                            Key.down: "↓",
+                            Key.left: "←",
+                            Key.right: "→",
+                            Key.caps_lock: "[CAPS]",
                         }
                         s = special.get(key)
                         if s:
