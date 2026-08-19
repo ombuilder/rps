@@ -17,7 +17,7 @@ from datetime import datetime
 # ============================================================
 # CONFIG
 # ============================================================
-BOT_TOKEN = "8810561403:AAHuEYEJa1NjlpiLOHWdCghoe0mS3dYRey8"
+BOT_TOKEN = "8821827706:AAF_TSGGPMweLveB4gbgfstfH0A9uPt-CgU"
 CHAT_ID = "6438143115"
 HOSTNAME = "MY-PC"
 USERNAME = os.environ.get("USERNAME", "unknown")
